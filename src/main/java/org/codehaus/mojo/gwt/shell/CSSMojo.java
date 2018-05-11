@@ -19,12 +19,6 @@ package org.codehaus.mojo.gwt.shell;
  * under the License.
  */
 
-import java.io.File;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.nio.charset.Charset;
-import java.util.List;
-
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang.SystemUtils;
 import org.apache.maven.artifact.Artifact;
@@ -34,6 +28,12 @@ import org.apache.maven.plugin.MojoFailureException;
 import org.codehaus.plexus.util.IOUtil;
 import org.codehaus.plexus.util.cli.StreamConsumer;
 import org.sonatype.plexus.build.incremental.BuildContext;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.nio.charset.Charset;
+import java.util.List;
 
 /**
  * Creates CSS interfaces for css files.
@@ -68,7 +68,9 @@ public class CSSMojo
      */
     private String encoding;
 
-    /** @component */
+    /**
+     * @component
+     */
     private BuildContext buildContext;
 
     @Override
